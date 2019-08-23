@@ -30,19 +30,33 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+The differences between .forEach and .map include the following: 
+- .forEach will not work on objects within an array .map WILL work on objects within an array.
+- .Map will return a new array whereas .forEach will not.
+
+
 2. What is the difference between a function and a method?
 
+The difference between a function and a method is small because a method is also a function. A method is a function located within an object. A function is a stand alone declaration outsite of an object. Because everything in JS is technically an object you could say that a method is a "functional object" within another object rather than just a piece of data or some other type of declaration. 
+
 3. What is closure?
+Closure is when you have a subset of code protected from outter scopes because the subset is nested within a larger set of code. The more traditional definition is a combination of functions and the lexical environment within which that function is being declared. The nested variable or function have the ability to reach outward for context but outter scopes cannot look inward for context which is exactly what protects this code and creates "closure".
 
 4. Describe the four rules of the 'this' keyword.
+ 1. Global Binding (when you have the 'this' keyword pointing at the window or global scope)
+ 2. Implicit Binding (When you call something using dot notation the object to the left of the dot is what the 'this' keyword point at for a reference)
+ 3. New keyword Binding (when you have a constructor function, the 'this' keyword gets pointed at the "NEW" object being created by the constructor function)
+ 4. Explicit Binding (when you demand the this keyword be attached to a specific object by using the call or apply method on the object in question)
 
 5. Why do we need super() in an extended class?
+JavaScript is a language that does not technically have classes and so the class identifier is simply referred to syntactical sugar. This means that the OOP(object oriented programming) along with constructor objects, prototypes, and inheritance principles have a different syntax to express the same code when using classes. 
+super() is used for the inheritance of the parent constructor which passes on any methods which would traditionally been located within the prototype.
 
 ## Project Set up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
+- [ x] Create a forked copy of this project.
 - [ ] Add TL as collaborator on Github.
 - [ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
 - [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
